@@ -1,0 +1,40 @@
+
+  
+  .movie-box{
+    border-radius: 15px;
+    /* height: 30vh; */
+    display: flex;
+    flex-direction: column;
+    margin: 2vw;
+    width: 20vh;
+  }
+
+  .movie-title{
+    color: #ffffff;
+  }
+
+  .poster-image{
+    border-radius: 15px;
+    height: 30vh;
+    width: 20vh;
+  }
+
+  .movie-box:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: #ffffff 5px;
+  }
+
+  /* #movie-box:hover .favourites-section{
+    visibility:visible;
+  }
+
+  .poster-image:hover .favourites-section{
+    visibility:visible;
+  }
+  
+  .favourites-section{
+    visibility: hidden;
+  } */
+
+  

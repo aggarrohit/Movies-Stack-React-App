@@ -1,0 +1,25 @@
+
+  
+  .add-to-favs{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-top: 5px;
+  }
+
+  .fav-icon{
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+  }
+
+  .title{
+    font-size: small;
+    color: white;
+  }
+
+
+  
+
+
+  

@@ -1,0 +1,37 @@
+
+  .movies-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+
+  .please-login{
+    color:white;
+    text-align:center;
+    width:100%
+  }
+
+  .main-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+  }
+
+
+
+  
+  @media only screen and (max-width:600px) {
+    .main-header{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .movies-list{
+      width: 100%;
+    }
+
+  }
+  

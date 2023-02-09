@@ -1,0 +1,57 @@
+
+  
+  .App-logo {
+    height: 10vmin;
+    width: 10vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 1s linear;
+      animation-direction: alternate;
+    }
+  }
+  
+  .App-header {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 5vmin;
+  }
+
+  .title-box{
+    text-align: left;
+    margin-left: 5vmin;
+  }
+
+  @media screen and (min-width:600px) and (max-width:1200px) {
+    .title-box{
+      display: none;
+    }
+  }
+  
+
+  .title-text {
+    color: #ffffff;
+    font-size: 25px;
+  }
+
+
+  .subtitle-text {
+    color: #ffffff;
+    font-size: 15px;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: scale(0.9);
+    }
+    to {
+      transform: scale(1.0);
+    }
+  }
+  

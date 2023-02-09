@@ -1,0 +1,34 @@
+
+.movies-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  width: calc(100% - 60px);
+  scrollbar-color: black;
+}
+
+.movies-list::-webkit-scrollbar {
+  display: none;
+}
+
+  .main-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+  }
+
+
+
+  
+  @media only screen and (max-width:600px) {
+    .main-header{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+  }
+  
