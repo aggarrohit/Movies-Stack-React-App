@@ -11,8 +11,9 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+As we have used APIs from themoviesdb.org to fetch, search, add/remove favourites and add/remove watch later movies, we have to enter our themoviesdb.org account's username and password in the login box once in 24 hours as session expires in one day.
+
+
 
 ### `yarn test`
 
