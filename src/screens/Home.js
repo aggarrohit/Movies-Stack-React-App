@@ -146,19 +146,19 @@ function Home() {
  }
 
  useEffect(()=>{
-  NewTestCode()
+  // NewTestCode()
  },[])
 
 
   return (
-   <></>
-      // <div className="Home">
+  //  <></>
+      <div className="Home">
         
-      //   <MoviesList/>/* this element has the header and search bar also */
-      //   <FavouriteMoviesList/>
-      //   <WatchLaterMoviesList/>
+        <MoviesList/>/* this element has the header and search bar also */
+        <FavouriteMoviesList/>
+        <WatchLaterMoviesList/>
         
-      // </div>
+      </div>
    
   );
 }
