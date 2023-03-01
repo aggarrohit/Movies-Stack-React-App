@@ -5,6 +5,7 @@ import RemoveFromFavorites from './RemoveFromFavorites';
 import AddToWatchLater from './AddToWatchList';
 import RemoveFromWatchList from './RemoveFromWatchList';
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import React from 'react';
 
 function MovieCard({movie,listType}) {
  
@@ -31,4 +32,4 @@ function MovieCard({movie,listType}) {
   
 }
 
-export default MovieCard;
+export default React.memo(MovieCard);

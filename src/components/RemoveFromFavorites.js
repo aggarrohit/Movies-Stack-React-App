@@ -5,7 +5,7 @@ import { UpdateFavoriteCall } from '../utils/network';
 
 function RemoveFromFavorites({movie}) {
 
-  const {sessionId,accountId,refreshFavouriteMoviesList,setRefreshFavouriteMoviesList} = useAuth()
+  const {sessionId,accountId,dispatchFavouriteMovies} = useAuth()
 
   const handleClick=async()=>{
     if(sessionId && accountId){
@@ -17,7 +17,7 @@ function RemoveFromFavorites({movie}) {
       const resp = await UpdateFavoriteCall(bodyobj,`${SESSION_ID_KEY}=${sessionId}`,accountId)
       if(resp.success){
         /* this centralized state update refreshes the favourites list */
-        setRefreshFavouriteMoviesList(refreshFavouriteMoviesList+1)
+        dispatchFavouriteMovies()
       }
     }else{
       alert(msg_to_auth)

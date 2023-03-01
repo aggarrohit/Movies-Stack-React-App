@@ -1,13 +1,12 @@
 import React,{ useEffect, useState } from 'react';
 import '../css/MoviesList.css';
 import useAuth from '../hooks/useAuth';
-import { LIST_TYPE_MOVIES } from '../utils/constants';
+import { LIST_TYPE_MOVIES, MOVIES_SCROLL_ID } from '../utils/constants';
 import { NowPlayingMoviesCall, SearchMoviesCall } from '../utils/network';
 import Header from './Header';
 import ListHeading from './ListHeading';
+import ListOfMovies from './ListOfMovies';
 import LoginView from './LoginView';
-import MovieCard from './MovieCard';
-import ScrollWrapper from './ScrollWrapper';
 import SearchBox from './SearchBox';
 
 function MoviesList() {
@@ -80,14 +79,7 @@ function MoviesList() {
 
         <ListHeading title={'Movies'}/>
       
-
-        <ScrollWrapper listType={LIST_TYPE_MOVIES}>
-          <div className="movies-list" id='movies-scroll'>
-            {movies.map((movie,index)=>{
-              return <MovieCard movie={movie} key={index} listType={LIST_TYPE_MOVIES}/>
-            })}
-            </div>
-        </ScrollWrapper>
+        <ListOfMovies id={MOVIES_SCROLL_ID} listType={LIST_TYPE_MOVIES} movies={movies}/>
       </>
   );
 }

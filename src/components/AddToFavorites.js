@@ -6,7 +6,7 @@ import { UpdateFavoriteCall } from '../utils/network';
 
 function AddToFavorites({movie}) {
 
-  const {sessionId,accountId,refreshFavouriteMoviesList,setRefreshFavouriteMoviesList} = useAuth()
+  const {sessionId,accountId,dispatchFavouriteMovies} = useAuth()
 
   const handleClick=async()=>{
     if(sessionId && accountId){
@@ -18,7 +18,7 @@ function AddToFavorites({movie}) {
       const resp = await UpdateFavoriteCall(bodyobj,`${SESSION_ID_KEY}=${sessionId}`,accountId)
       if(resp.success){
         /* this centralized state update refreshes the favourites list */
-        setRefreshFavouriteMoviesList(refreshFavouriteMoviesList+1)
+        dispatchFavouriteMovies()
       }
     }else{
       alert(msg_to_auth)
@@ -29,8 +29,10 @@ function AddToFavorites({movie}) {
     
       <div className="add-to-favs">
         <label className='title'>Add to favorites</label>
-        <img src={require("../assets/images/favourite.png")} className="fav-icon" alt="favorite" 
-            onClick={handleClick}/>
+        <img  src={require("../assets/images/favourite.png")} 
+              className="fav-icon" 
+              alt="favorite" 
+              onClick={handleClick}/>
       </div>
    
   );

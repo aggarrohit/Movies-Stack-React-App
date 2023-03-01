@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useReducer, useState } from 'react';
 import { ACCOUNT_ID_KEY, REQUEST_TOKEN_KEY, SESSION_ID_KEY } from '../utils/constants';
 import { hasValue } from '../utils/funcs';
 import { CreateRequestTokenCall, CreateSessionCall, GetAccountDetailsCall, ValidateTokenCall } from '../utils/network';
@@ -13,9 +13,17 @@ const [token,setToken] = useState();
 const [sessionId,setSessionId] = useState()
 const [accountId,setAccountId] = useState()
 const [alert,setAlert] = useState()
-const [refreshFavouriteMoviesList,setRefreshFavouriteMoviesList] = useState(1)
-const [refreshWatchLaterMoviesList,setRefreshWatchLaterMoviesList] = useState(1)
 
+const reducerFavouriteMovies=(state)=>{
+  return {count:state.count+1}
+}
+
+const reducerWatchLaterMovies=(state)=>{
+  return {count:state.count+1}
+}
+
+const [refreshFavouriteMovies,dispatchFavouriteMovies] = useReducer(reducerFavouriteMovies,{count:1})
+const [refreshWatchLaterMovies,dispatchWatchLaterMovies] = useReducer(reducerWatchLaterMovies,{count:1})
 
 useEffect(()=>{
   let active = true;
@@ -119,8 +127,8 @@ return (<AuthContext.Provider value={{token,setToken,
                                       AuthenticateRequestToken,
                                       sessionId,accountId,
                                       alert,CreateRequestToken,
-                                      refreshFavouriteMoviesList,setRefreshFavouriteMoviesList,
-                                      refreshWatchLaterMoviesList,setRefreshWatchLaterMoviesList
+                                      refreshFavouriteMovies,dispatchFavouriteMovies,
+                                      refreshWatchLaterMovies,dispatchWatchLaterMovies
                                     }}>
           {children}
         </AuthContext.Provider>

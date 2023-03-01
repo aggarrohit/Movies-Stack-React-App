@@ -5,7 +5,7 @@ import { UpdateWatchLaterCall } from '../utils/network';
 
 function RemoveFromWatchList({movie}) {
 
-  const {sessionId,accountId,refreshWatchLaterMoviesList,setRefreshWatchLaterMoviesList} = useAuth()
+  const {sessionId,accountId,dispatchWatchLaterMovies} = useAuth()
 
   const handleClick=async()=>{
     if(sessionId && accountId){
@@ -17,7 +17,7 @@ function RemoveFromWatchList({movie}) {
       const resp = await UpdateWatchLaterCall(bodyobj,`${SESSION_ID_KEY}=${sessionId}`,accountId)
       if(resp.success){
         /* this centralized state update refreshes the watch later list */
-        setRefreshWatchLaterMoviesList(refreshWatchLaterMoviesList+1)
+        dispatchWatchLaterMovies()
       }
     }else{
       alert(msg_to_auth)
