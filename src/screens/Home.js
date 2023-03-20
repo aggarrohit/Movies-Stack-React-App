@@ -3,7 +3,7 @@ import React from 'react'
 import MoviesList from '../components/MoviesList';
 import FavouriteMoviesList from '../components/FavouriteMoviesList';
 import WatchLaterMoviesList from '../components/WatchLaterMoviesList';
-
+ 
 function Home() {
 
   return (
