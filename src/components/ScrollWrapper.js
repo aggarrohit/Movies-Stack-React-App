@@ -45,6 +45,7 @@ const  ScrollWrapper=({children,listType})=> {
   useEffect(()=>{ 
     if(getScrollElement().scrollWidth === getScrollElement().offsetWidth ) setShowRighttButton(false) 
     else setShowRighttButton(true)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[children])
 
   return (

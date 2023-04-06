@@ -26,6 +26,7 @@ function MoviesList() {
       GetNowPlayingMovies(active)
     }
     return ()=> active = false;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[searchText])
 
 

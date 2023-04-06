@@ -29,6 +29,7 @@ useEffect(()=>{
   let active = true;
   CheckSessionIdAndRequestToken(active)
   return ()=> active = false;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
 },[])
 
 /* first we check if session id and/or request toekn is present */

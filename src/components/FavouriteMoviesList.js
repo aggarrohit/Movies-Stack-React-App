@@ -17,6 +17,7 @@ function FavouriteMoviesList() {
     if(hasValue(sessionId)){
       GetFavoriteMovies()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[sessionId,refreshFavouriteMovies])
 
   const GetFavoriteMovies=()=>{
