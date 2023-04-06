@@ -36,9 +36,9 @@ function FavouriteMoviesList() {
   return (<>
             <ListHeading title={LIST_TYPE_FAVOURITES_HEADING}/>
             <ListOfMovies id={FAVS_SCROLL_ID} listType={LIST_TYPE_FAVOURITES} movies={favouriteMovies}/>
-            {!sessionId && favouriteMovies.length==0 
+            {!sessionId && favouriteMovies.length===0 
                             && <p className='please-login'>Please login to see favorite movies</p>}
-            {sessionId && favouriteMovies.length==0 
+            {sessionId && favouriteMovies.length===0 
                             && <p className='please-login'>No favorite movies..</p>}
           </>
   );

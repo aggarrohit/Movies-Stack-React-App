@@ -35,7 +35,7 @@ function WatchLaterMoviesList() {
               <ListOfMovies id={WATCHLIST_SCROLL_ID} listType={LIST_TYPE_WATCHLATER} movies={watchLaterMovies}/>
               {!sessionId && watchLaterMovies.length===0 
                           && <p className='please-login'>Please login to see watch later movies</p>}
-              {sessionId && watchLaterMovies.length==0 
+              {sessionId && watchLaterMovies.length===0 
                               && <p className='please-login'>No watch later movies..</p>}
               
            

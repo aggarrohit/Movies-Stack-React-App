@@ -9,7 +9,8 @@ function Home() {
   return (
       <div className="Home">
         
-        <MoviesList/>/* this element has the header and search bar also */
+        /* this element has the header and search bar also */
+        <MoviesList/>
         <FavouriteMoviesList/>
         <WatchLaterMoviesList/>
         
