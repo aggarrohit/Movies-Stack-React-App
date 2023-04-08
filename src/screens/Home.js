@@ -10,7 +10,7 @@ function Home() {
       <div className="Home">
         
         {/* this element has the header and search bar also */}
-        <MoviesList/>
+        <MoviesList/> 
         <FavouriteMoviesList/>
         <WatchLaterMoviesList/>
         
